@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Shopping Basket</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="custom.css" rel="stylesheet">	
+<!-- Navigation -->
+    <div class="navbar">
+	<nav>
+	    <div class="dropdown"><button class="dropbtn">options<i class="fa fa-caret-down"></i></button><div class="dropdown-content">
+			<a href="./index.html">Dashboard</a>
+		</div></div>
+	</nav>
+	</div>
+
+
+</head>
+<body>
+    <h1>order</h1>
+    <div class="shop">
+        <!-- Product List -->
+        <div class="product" data-name="drink" data-price="1.00">
+            <p>
+<input list="drinks">
+
+<datalist id="drinks">
+  <option value="orange juice">
+  <option value="J2O">
+  <option value="coffe">
+  <option value="latte">
+  <option value="slushies">
+  <option value="lemonade">
+  <option value="surprise">
+  <option value="pepsi">
+  <option value="smoothies(blueberry)">
+  <option value="smoothies(banana)">
+  <option value="smoothies(strawberry)">
+  <option value="smoothies(Chocolate)">
+  <option value="smoothies(Vanilla)">
+  <option value="smoothies(Mint)">
+  <option value="coke">
+</datalist>
+</p>
+	<h3><p>drink</p></h3>
+            <button onclick="addToBasket('drink', 1.00)">Add to Basket</button>
+        </div>
+<br>
+        <div class="product" data-name="ice cream" data-price="1.50">
+
+            <p>
+<input list="ice cream">
+
+<datalist id="ice cream">
+  <option value="strawbery">
+  <option value="chocolate">
+  <option value="mint">
+  <option value="mint chock chip">
+  <option value="salted caremal">
+  <option value="rocky road">
+  <option value="bubblegum">
+  <option value="lemon meringue">
+  <option value="banana">
+  <option value="cookies and cream">
+  <option value="chocolate">
+  <option value="neapoliten">
+  <option value="oreo">
+  <option value="vanila"
+</datalist>
+</p>
+	<h3><p>ice cream</p></h3>
+            <button onclick="addToBasket('ice cream', 1.50)">Add to Basket</button>
+        </div>
+<br>
+        <div class="product" data-name="sundae" data-price="0.75">
+            <p>
+<input list="sundaes">
+
+<datalist id="sundaes">
+  <option value="chocolate">
+  <option value="kinder bueno">
+  <option value="sherbert">
+  <option value="classic">
+  <option value="monster">
+  <option value="banana">
+  <option value="bubblegum">
+</datalist>
+</p>
+	<p><h3>sundae</h3></p>
+            <button onclick="addToBasket('sundae', 0.75)">Add to Basket</button>
+        </div>
+    </div>
+
+    <!-- Basket Section -->
+    <h2>Your Basket</h2>
+    <div id="basket">
+        <ul id="basket-items"></ul>
+        <p>Total: $<span id="total">0.00</span></p>
+    </div>
+
+<a href="mailto:joshua.ranken@icloud.com">
+	<button type="button">Send Order</button>
+</a>
+
+    <script src="script.js"></script>
+</body>
+</html>

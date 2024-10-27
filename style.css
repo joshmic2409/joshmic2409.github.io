@@ -1,0 +1,18 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+.shop {
+    display: flex;
+    gap: 20px;
+}
+.product {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+#basket {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Basket Page</title>
+  <link rel="stylesheet" href="basket_styling.css">
+    <link href="custom.css" rel="stylesheet">	
+
+<!-- Navigation -->
+    <div class="navbar">	
+	
+	<nav>
+	    <div class="dropdown"><button class="dropbtn">options<i class="fa fa-caret-down"></i></button><div class="dropdown-content">
+                        <a href="./index.html">home</a>
+                        <a href="./product.html">product</a>
+	</div></div>		
+
+	</nav>
+	</div>
+
+
+<style>
+        body {
+            background-color: #50F9FA; /* Change this color as needed */
+        }
+    </style>
+
+</head>
+<body>
+  <h1>Your Cart</h1>
+
+  <!-- Cart items will be displayed here -->
+  <div id="cart-items"></div>
+
+  <!-- Checkout button -->
+  <button onclick="checkout()">Proceed to Checkout</button>
+
+  <!-- Link to JavaScript file -->
+  <script src="cart.js"></script>
+
+  <!-- Call displayCartItems to render items on page load -->
+  <script>
+    // Display the items in the cart when the page loads
+    displayCartItems();
+  </script>
+</body>
+</html>

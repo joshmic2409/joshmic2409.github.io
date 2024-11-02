@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">-->
+    <!--<link rel="stylesheet" href="/assets/css/custom.css">-->
+	
+    <!-- Bootstrap Core CSS -->
+    <!--<link href="/css/bootstrap.min.css" rel="stylesheet">-->
+
+    <!-- Custom CSS: You can use this stylesheet to override any Bootstrap styles and/or apply your own styles -->
+    <link href="custom.css" rel="stylesheet">	
+		
+</head>
+
+<body> 
+
+	<!-- dependencies -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.10.1/lodash.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.3.3/backbone.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jointjs/2.1.0/joint.js"></script>	
+
+<!-- Navigation -->
+    <div class="navbar">	
+	
+	<nav>
+	    <div class="dropdown"><button class="dropbtn">options<i class="fa fa-caret-down"></i></button><div class="dropdown-content">
+                        <a href="./index.html">home</a>
+                        <a href="./basket.html">basket</a>
+	</div></div>		
+
+
+<style>
+        body {
+            background-color: #50F9FA; /* Change this color as needed */
+        }
+    </style>
+
+	</nav>
+	</div >
+<style>
+    .image-container {
+      float: left;
+      margin-right: 20px;
+    }
+    tr {
+      width: 100%
+    }
+    td {
+      width: 33%
+    }
+  </style>
+</head>
+<body>
+<BR><BR>
+
+<!-- Start a table here -->
+<table border=5>
+  
+  <tr>  <!-- Start a table row with TR -->
+  <td>  <!-- Start a table cell with TD -->
+  <!-- Start cell contents -->
+  <div class="image-container">
+    <img src="https://ohsweetbasil.com/wp-content/uploads/creamy-homemade-strawberry-ice-cream-recipe-6-scaled.jpg" width="150" height="200">
+  </div>
+    <p>
+      <h3>Strawbery ice cream<h3>
+      <h4>Our strawbery  ice cream is made from natural ingrediants.<br> It is glutenfree but not dairyfree.</h4>
+  <button onclick="addToCart('strawbery ice cream', 'strawbery ice cream', 1)">Add to Cart</button>
+
+    </p>
+  <!-- Finish cell contents -->
+  </td>  <!-- Close a table cell with /TD -->
+  
+  <td>  <!-- Start a table cell with TD --> 
+  <!-- Start cell contents -->
+  <div class="image-container">
+    <img src="https://th.bing.com/th/id/R.a67a7664020c610f781b0dc2274feef7?rik=QId2Fn1lZGv3nQ&riu=http%3a%2f%2fthesuburbansoapbox.com%2fwp-content%2fuploads%2f2017%2f03%2fChocolate-Ice-Cream-2.jpg&ehk=GIMwMMDER8Ub6NJJkM9W750s4UZDA36PhagyAJr03eg%3d&risl=&pid=ImgRaw&r=0" width="150" height="200">
+  </div>
+   <p>
+     <h3>Chocolte ice cream</h3>
+     <h4>Our chocolate ice cream is made from natural ingrediants.<br> It is glutenfree but not dairyfree because it contains milk and chocolate.</h4>
+  <button onclick="addToCart('chocolate ice cream', 'chocolate ice cream', 1)">Add to Cart</button>
+   </p>
+   <!-- Finish cell contents -->
+  </td>  <!-- Close a table cell with /TD -->
+
+  <td>  <!-- Start a table cell with TD --> 
+  <!-- Start cell contents -->
+  <div class="image-container">
+    <img src="https://tarateaspoon.com/wp-content/uploads/2021/06/Vanilla-Ice-Cream-cone-glass-sq.jpeg" width="150" height="200">
+  </div>
+    <p>
+      <h3>vanilla ice cream</h3>
+      <h4>This ice cream is a plain creamy flavour.
+  <button onclick="addToCart('vanilla ice cream', 'vanilla ice cream', 1)">Add to Cart</button>
+    </p>
+   <!-- Finish cell contents -->
+  </td>  <!-- Close a table cell with /TD -->
+  </tr>  <!-- Close a table row with /TR -->
+
+
+  <tr>
+  <td>
+  <div class="image-container">
+    <img src="https://www.thespruceeats.com/thmb/zAxbZmv8j8gVIpBb5apnGnCctv4=/2998x2000/filters:fill(auto,1)/MintIceCreamHERO-color-corrected-df1d9b72aaeb41d38502f435fe99f65d.jpg" width="150" height="200">
+  </div>
+   <p>
+     <h3>Mint ice cream</h3>
+     <h4>Our mint ice cream is flavoured by a mint leaf.</h4>
+  <button onclick="addToCart('mint ice cream', 'mint ice cream', 2)">Add to Cart</button>
+   </p>  
+  </td>
+
+  <td>
+  <div class="image-container">
+    <img src="https://decoratedtreats.com/wp-content/uploads/2022/01/mint-oreo-ice-cream-10.jpg" width="150" height="200">
+  </div>
+    <p>
+      <h3>mint choc chip</h3>
+      <h4>Our mint choc chip ice cream is made with ice cream and mint leafs and cookie blended together</h4>
+  <button onclick="addToCart('mint choc chip ice cream', 'mint choc chip ice cream', 2)">Add to Cart</button>
+    </p>
+  </td>
+
+  <td>
+  <div class="image-container">
+    <img src="https://www.thespruceeats.com/thmb/0sgpJNxi8ApV42Fzf_ScwobEXGI=/3000x2001/filters:fill(auto,1)/SaltedCaramelIceCreamHERO-9e49945bc9fb4afca856e37f5b1bbbe5.jpg" width="200" height="200">
+  </div>
+    <p>
+      <h3>Salted caramel ice cream</h3>
+      <h4>Our salted caramel ice cream is not glutenfree or dairyfree unfortunatly.</h4>
+  <button onclick="addToCart('salted caramel ice cream', 'salted caramel ice cream', 2)">Add to Cart</button>
+   </p>
+  </td>
+
+  <tr>
+  <td>
+  <div class="image-container">
+    <img src="https://bing.com/th?id=OSK.6e2bd6c6fef5fffb7f49220b94e1b474" width="150" height="200">
+  </div>
+  <p><h3>
+     cookies and cream ice cream</h3>
+  <h4>Our ice cream is completly organic but contains gluten and dairy.</h4></p>
+  <button onclick="addToCart('cookies and cream ice cream', 'cookies and cream ice cream', 3)">Add to Cart</button>
+  </td>
+
+  <td>
+  <div class="image-container">
+    <img src="https://th.bing.com/th/id/R.b49b1ad9129590575af2010e7e39e840?rik=qEeaIIxmS4DlBg&pid=ImgRaw&r=0" width="150" height="200">
+  </div>
+  <p>
+     <h3>bubblegum ice cream</h3>
+     <h4>Our bubblegum ice cream is glutenfree but not dairyfree but it can be gluten depending on the topping.</h4>
+  <button onclick="addToCart('bubblegum ice cream', 'bubblegum ice cream', 2)">Add to Cart</button>
+
+  <td>
+  <div class="image-container">
+    <img src="https://th.bing.com/th/id/OIP.lOUoL8nMl3uM7W3Y8ulxDAHaLH?rs=1&pid=ImgDetMain" width="150" height="200">
+  </div>
+  <p>
+     <h3>rocky road ice cream</h3>
+     <h4>Our rocky road ice cream is neither glutenfree or dairyfree.</h4>
+ <button onclick="addToCart('rocky road ice cream', 'rocky road ice cream', 4)">Add to Cart</button>
+
+
+
+
+  <script src="cart.js"></script>
+</table> <!-- Close the table with /TABLE -->
+</body>

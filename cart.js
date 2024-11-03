@@ -42,6 +42,8 @@ function displayCartItems() {
     itemElement.innerHTML = `
       <p>${item.productName} - $${item.price} x ${item.quantity}</p>
       <button onclick="removeFromCart('${item.productId}')">Remove</button>
+      <button_qty onclick="increaseQuantity('${item.productId}')">+</button_qty>
+      <button_qty onclick="decreaseQuantity('${item.productId}')">-</button_qty>
     `;
     cartItemsContainer.appendChild(itemElement);
   });
@@ -61,6 +63,43 @@ function removeFromCart(productId) {
   // Refresh the displayed cart items
   displayCartItems();
 }
+
+function decreaseQuantity(productId) {
+  // Retrieve cart from localStorage, or initialize as an empty array if it doesn't exist
+  let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+  // Check if the product is already in the cart
+  const index = cart.findIndex(item => item.productId === productId);
+  
+  cart[index].quantity = cart[index].quantity - 1;
+
+  if(cart[index].quantity <= 0){
+     removeFromCart(productId);
+  } else {
+     // Update the cart in localStorage
+     localStorage.setItem('cart', JSON.stringify(cart));
+
+     // Refresh the displayed cart items
+     displayCartItems();
+  }
+}
+
+function increaseQuantity(productId) {
+  // Retrieve cart from localStorage, or initialize as an empty array if it doesn't exist
+  let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+  // Check if the product is already in the cart
+  const index = cart.findIndex(item => item.productId === productId);
+  
+  cart[index].quantity = cart[index].quantity + 1;
+
+  // Update the cart in localStorage
+  localStorage.setItem('cart', JSON.stringify(cart));
+
+  // Refresh the displayed cart items
+  displayCartItems();
+}
+
 
 // Function to handle checkout (dummy function for this example)
 function checkout() {
